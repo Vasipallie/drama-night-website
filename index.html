@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drama Night 2025 - School Theater Production</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Stage Lights -->
+    <div class="stage-lights">
+        <div class="spotlight spotlight-1"></div>
+        <div class="spotlight spotlight-2"></div>
+        <div class="spotlight spotlight-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- School Logo -->
+            <div class="navbar-logo">
+                <img src="images/R.png" alt="School Logo" class="navbar-logo-img">
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#team" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <button id="addToCalendar" class="calendar-btn">
+                        <i class="fas fa-calendar-plus"></i>
+                        Add to Calendar
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">  
+        <section id="home" class="home-section active">
+            <div class="stage-floor">
+                <div class="container">
+                    <!-- Hero Content -->
+                    <div class="hero-content">
+                        <h1 class="main-title">
+                            <div class="title-with-logos">
+                                <div class="title-logo left-logo">
+                                    <img src="images/drama.png" alt="Drama Club Logo" class="title-logo-img">
+                                </div>
+                                <div class="title-text">
+                                    <span class="title-line">GIIS Drama Night</span>
+                                    <span class="title-year">2025</span>
+                                </div>
+                            </div>
+                        </h1>
+                        <p class="subtitle">An Unforgettable Evening of Theater</p>
+                        
+                        <div class="event-details">
+                            <div class="detail-card">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <h3>Date</h3>
+                                    <p>October 25, 2025</p>
+                                </div>
+                            </div>
+                            <div class="detail-card">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h3>Time</h3>
+                                    <p>7:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="detail-card">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Venue</h3>
+                                    <p>School Auditorium</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cta-section">
+                            <button class="cta-btn primary" id="addToCalendarMain">
+                                <i class="fas fa-calendar-plus"></i>
+                                Add to Google Calendar
+                            </button>
+                            <button class="cta-btn secondary" onclick="scrollToSection('team')">
+                                <i class="fas fa-users"></i>
+                                Meet the Cast
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Featured Performance -->
+                    <div class="featured-performance">
+                        <div class="performance-card">
+                            <h2>This Year's Production</h2>
+                            <h3>My Fair Lady</h3>
+                            <p>Join us for a  enchanting evening featuring our very own adaptation version of the classic play "Pygmalion" </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <div class="stage-floor">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Meet Our Cast & Crew</h2>
+                        <p class="section-subtitle">The talented individuals bringing magic to the stage</p>
+                    </div>
+
+                    <!-- Cast Members -->
+                    <div class="team-grid">
+                        <div class="team-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-theater-masks"></i>
+                                Principal Cast
+                            </h3>
+                            <div class="members-grid">
+                                <div class="member-card">
+                                    <div class="member-image">
+                                        <div class="placeholder-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <p class="role">Juliet / Ophelia</p>
+                                        <p class="bio">Senior student with 4 years of theater experience</p>
+                                    </div>
+                                </div>
+
+                                <div class="member-card">
+                                    <div class="member-image">
+                                        <div class="placeholder-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Michael Chen</h4>
+                                        <p class="role">Romeo / Hamlet</p>
+                                        <p class="bio">Passionate performer and drama club president</p>
+                                    </div>
+                                </div>
+
+                                <div class="member-card">
+                                    <div class="member-image">
+                                        <div class="placeholder-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Emma Davis</h4>
+                                        <p class="role">Titania / Nurse</p>
+                                        <p class="bio">Award-winning actress with natural stage presence</p>
+                                    </div>
+                                </div>
+
+                                <div class="member-card">
+                                    <div class="member-image">
+                                        <div class="placeholder-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>James Wilson</h4>
+                                        <p class="role">Mercutio / Bottom</p>
+                                        <p class="bio">Comedy specialist bringing humor to every scene</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-cogs"></i>
+                                Production Crew
+                            </h3>
+                            <div class="members-grid">
+                                <div class="member-card">
+                                    <div class="member-image">
+                                        <div class="placeholder-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Ms. Rodriguez</h4>
+                                        <p class="role">Director</p>
+                                        <p class="bio">Theater department head with 15 years experience</p>
+                                    </div>
+                                </div>
+
+                                <div class="member-card">
+                                    <div class="member-image">
+                                        <div class="placeholder-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Alex Thompson</h4>
+                                        <p class="role">Stage Manager</p>
+                                        <p class="bio">Senior student coordinating all backstage operations</p>
+                                    </div>
+                                </div>
+
+                                <div class="member-card">
+                                    <div class="member-image">
+                                        <div class="placeholder-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Lisa Park</h4>
+                                        <p class="role">Costume Designer</p>
+                                        <p class="bio">Art student creating authentic period costumes</p>
+                                    </div>
+                                </div>
+
+                                <div class="member-card">
+                                    <div class="member-image">
+                                        <div class="placeholder-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>David Kumar</h4>
+                                        <p class="role">Lighting Designer</p>
+                                        <p class="bio">Tech-savvy student handling all lighting effects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content"><!-- 
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-envelope"></i> drama@school.edu</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                </div> -->
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#team">Team</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GIIS Drama Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
