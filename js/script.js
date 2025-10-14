@@ -251,10 +251,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function addToGoogleCalendar() {
         // Event details - customize these as needed
         const eventDetails = {
-            title: 'Drama Night 2025 - Shakespeare\'s Greatest Hits',
-            startDate: '20250315T190000Z', // March 15, 2025, 7:00 PM UTC
-            endDate: '20250315T210000Z',   // March 15, 2025, 9:00 PM UTC
-            description: 'Join us for an enchanting evening featuring scenes from Shakespeare\'s most beloved works, brought to life by our talented student performers.',
+            title: 'Drama Night 2025 - Pygmalion by George Bernard Shaw',
+            startDate: '20251025T190000Z', // October 25 , 2025, 7:00 PM UTC +8
+            endDate: '20251025T210000Z',   // October 25, 2025, 9:00 PM UTC +8
+            description: 'Join us for an enchanting evening featuring scenes from Pygmalion, brought to life by our talented student performers.',
             location: 'School Auditorium'
         };
         
