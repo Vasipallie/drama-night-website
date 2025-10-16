@@ -1,8 +1,11 @@
 // Enhanced Drama Night Homepage JavaScript with Modern Effects
 
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileBackdrop = document.getElementById('mobileBackdrop');
+    
+    let isMobileMenuOpen = false;
 
     setupMobileMenu();
     setupCalendarButtons();
@@ -11,31 +14,55 @@ document.addEventListener('DOMContentLoaded', function() {
     addHoverEffects();
 
     function setupMobileMenu() {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            toggleBars(hamburger.classList.contains('active'));
-        });
-        document.addEventListener('click', e => {
-            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) closeMobileMenu();
-        });
+        if (mobileToggle && mobileNav && mobileBackdrop) {
+            // Mobile toggle click
+            mobileToggle.addEventListener('click', toggleMobileMenu);
+
+            // Close on backdrop click
+            mobileBackdrop.addEventListener('click', closeMobileMenu);
+
+            // Close on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && isMobileMenuOpen) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Close menu on window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && isMobileMenuOpen) {
+                    closeMobileMenu();
+                }
+            });
+        }
+    }
+
+    function toggleMobileMenu() {
+        if (isMobileMenuOpen) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+
+    function openMobileMenu() {
+        mobileNav.classList.add('open');
+        mobileBackdrop.classList.add('open');
+        mobileToggle.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        isMobileMenuOpen = true;
     }
 
     function closeMobileMenu() {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-        toggleBars(false);
-    }
-
-    function toggleBars(active) {
-        const bars = hamburger.querySelectorAll('.bar');
-        bars[0].style.transform = active ? 'rotate(45deg) translate(6px, 6px)' : 'none';
-        bars[1].style.opacity = active ? '0' : '1';
-        bars[2].style.transform = active ? 'rotate(-45deg) translate(6px, -6px)' : 'none';
+        mobileNav.classList.remove('open');
+        mobileBackdrop.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        document.body.style.overflow = '';
+        isMobileMenuOpen = false;
     }
 
     function setupCalendarButtons() {
-        document.querySelectorAll('#addToCalendar, #addToCalendarMain').forEach(btn => {
+        document.querySelectorAll('#addToCalendar, #addToCalendarMain, #addToCalendarMobile').forEach(btn => {
             btn.addEventListener('click', () => {
                 const url = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Drama%20Night%202025%20-%20Pygmalion&dates=20251025T180000/20251025T210000&details=GIIS%20Drama%20Night%202025%20featuring%20Pygmalion&location=School%20Auditorium';
                 window.open(url, '_blank');

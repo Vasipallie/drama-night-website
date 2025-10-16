@@ -21,39 +21,56 @@
         <div class="spotlight spotlight-3"></div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <!-- School Logo -->
-            <div class="navbar-logo">
-                <img src="images/R.png" alt="School Logo" class="navbar-logo-img">
-                <img src="images/drama.png" alt="School Logo" class="navbar-logo-img">
+    <!-- New Clean Navigation -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <img src="images/R.png" alt="School Logo" class="logo-img">
+                <img src="images/drama.png" alt="Drama Logo" class="logo-img">
             </div>
 
-            <!-- Navigation Menu -->
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="team.html" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                    <button id="addToCalendar" class="calendar-btn">
+            <!-- Desktop Navigation -->
+            <div class="desktop-nav">
+                <a href="index.html" class="nav-btn active">
+                    <span>Home</span>
+                </a>
+                <a href="team.html" class="nav-btn">
+                    <span>Team</span>
+                </a>
+                <button class="calendar-button" id="addToCalendar">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Add to Calendar</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-toggle" id="mobileToggle" title="Open Menu" aria-label="Open Navigation Menu">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+
+            <!-- Mobile Navigation Overlay -->
+            <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-content">
+                    <a href="index.html" class="mobile-nav-btn active">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <a href="team.html" class="mobile-nav-btn">
+                        <i class="fas fa-users"></i>
+                        Team
+                    </a>
+                    <button class="mobile-calendar-btn" id="addToCalendarMobile">
                         <i class="fas fa-calendar-plus"></i>
                         Add to Calendar
                     </button>
-                </li>
-            </ul>
-
-            <!-- Mobile Menu Toggle -->
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <main class="main-content">  
         <section id="home" class="home-section active">
             <div class="stage-floor">
@@ -91,7 +108,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
                                     <h3>Venue</h3>
-                                    <p>School Auditorium</p>
+                                    <p>Grand MPH (Level 1), Global Indian International School, Punggol Campus</p>
                                 </div>
                             </div>
                         </div>
